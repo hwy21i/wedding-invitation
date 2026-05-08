@@ -1,26 +1,20 @@
 import app from "./app.js";
 import { env } from "./config/env.js";
 import { ensureFile } from "./utils/fileDb.js";
-import cors from "cors";
 import express from "express";
-const PORT = process.env.PORT || 5000;
-
-
-
+import cors from "cors";
 
 const app = express();
 
+const PORT = process.env.PORT || 5000;
 app.use(cors());
-app.use(express.json());
-app.use(cors());
-
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 app.get("/", (req, res) => {
   res.send("Backend running");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 async function startServer() {
   await ensureFile(env.dataFile);
 
