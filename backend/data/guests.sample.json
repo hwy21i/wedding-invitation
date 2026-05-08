@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ADEL-0001",
+    "name": "Hana Bekele",
+    "contact": "hana@example.com",
+    "guestCount": 2,
+    "attendance": "attending",
+    "createdAt": "2026-04-20T14:05:00.000Z",
+    "qrCode": "data:image/png;base64,SAMPLE_QR_PLACEHOLDER"
+  },
+  {
+    "id": "ADEL-0002",
+    "name": "Samuel Tadesse",
+    "contact": "+251911000222",
+    "guestCount": 4,
+    "attendance": "attending",
+    "createdAt": "2026-04-22T09:30:00.000Z",
+    "qrCode": "data:image/png;base64,SAMPLE_QR_PLACEHOLDER"
+  }
+]
