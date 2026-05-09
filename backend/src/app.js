@@ -4,7 +4,8 @@ import { env } from "./config/env.js";
 import guestRoutes from "./routes/guestRoutes.js";
 
 const app = express();
-
+app.use(cors());
+app.use(express.json());
 app.use(
   cors({
     origin: env.clientOrigin,
