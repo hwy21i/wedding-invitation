@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: wedding-invitation-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_ORIGIN
+        value: "*"
+      - key: ALLOWED_ORIGIN_PATTERNS
+        value: https://*.vercel.app
+      - key: DATA_FILE
+        value: ./data/guests.json

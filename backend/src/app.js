@@ -39,6 +39,7 @@ app.use(
 app.use(express.json({ limit: "1mb" }));
 
 app.use("/api", guestRoutes);
+app.use("/", guestRoutes);
 app.get("/", (_req, res) => {
   res.json({
     name: "Wedding Invitation API",
